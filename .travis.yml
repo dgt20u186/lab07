@@ -1,0 +1,26 @@
+language: cpp
+
+compiler:
+- gcc
+- clang
+os:
+ - linux
+
+jobs:
+  include:
+  - name: "all projects"
+
+script:
+    - cmake -H. -B_build
+    - cmake --build _build
+    - cd _build && cpack -G "TGZ" && cd ..
+    - cd _build && cpack -G "DEB" && cd ..
+    
+
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake
+      - cmake-data
