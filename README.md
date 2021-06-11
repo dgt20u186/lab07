@@ -19,7 +19,7 @@ $ open https://github.com/ruslo/hunter
 ## Tutorial
 
 ```sh
-$ export GITHUB_USERNAME=morsiiik  
+$ export GITHUB_USERNAME=dgt20u186 
 $ alias gsed=sed                             #заменяем sed на gsed
 ```
 
